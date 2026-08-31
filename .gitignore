@@ -1,0 +1,38 @@
+# Operating System Files
+
+.DS_Store
+Thumbs.db
+
+
+# IDE Settings
+
+.vscode/
+.idea/
+
+
+# Temporary Files
+
+*.tmp
+*.temp
+
+
+# Logs
+
+*.log
+
+
+# Backup Files
+
+*.bak
+
+
+# Sensitive Files
+
+*.env
+*.key
+*.pem
+
+
+# Exported Reports
+
+*.zip
