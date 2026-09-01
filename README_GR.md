@@ -1,121 +1,159 @@
-# HDIIA Αξιολόγηση Ασφάλειας Κρίσιμων Υποδομών
+# HDIIA Critical Infrastructure Security Assessment
 
-## Επισκόπηση
+## Επισκόπηση Έργου
 
-Το παρόν έργο παρουσιάζει μια αξιολόγηση ασφάλειας (Security Assessment) και σχεδιασμό αρχιτεκτονικής ασφαλείας (Target Security Architecture Design) για έναν προσομοιωμένο ευρωπαϊκό κυβερνητικό οργανισμό κρίσιμων υποδομών.
+Το HDIIA Critical Infrastructure Security Assessment είναι ένα
+cybersecurity portfolio project που παρουσιάζει έναν ολοκληρωμένο κύκλο
+αξιολόγησης ασφάλειας και σχεδιασμού target security architecture.
 
-Ο οργανισμός λειτουργεί ένα υβριδικό περιβάλλον Data Center και Cloud, το οποίο υποστηρίζει την ασφαλή αποθήκευση, διαχείριση και ανταλλαγή ευαίσθητων πληροφοριών μεταξύ κυβερνητικών φορέων.
+Η προσέγγιση βασίζεται σε risk-driven methodology και συνδέει
+επιχειρησιακές απαιτήσεις με τεχνικά security controls.
 
-Ο στόχος του έργου είναι η ανάπτυξη μιας επαγγελματικής Risk-Based Security Approach για την προστασία κρίσιμων υποδομών μέσω:
+------------------------------------------------------------------------
 
-- Security Assessment
-- Threat Modeling
-- Risk Assessment
-- Security Architecture Design
-- Security Governance
-- Security Improvement Planning
-- Human Risk Management
+## Μεθοδολογία Assessment
 
----
+Η αξιολόγηση ακολουθεί:
 
-## Επιχειρησιακό Σενάριο
+Business Context
 
-Η Hellenic Defense Information Infrastructure Agency (HDIIA) είναι ένας φανταστικός κυβερνητικός οργανισμός υπεύθυνος για την ασφαλή αποθήκευση, διαχείριση και ανταλλαγή ευαίσθητων πληροφοριών μεταξύ κυβερνητικών υπηρεσιών.
+↓
 
-Η υποδομή περιλαμβάνει:
+Critical Services
 
-- Government Data Center Facilities
-- Hybrid Cloud Services
-- Enterprise Identity Services
-- Critical Applications
-- Physical Security Systems
-- Security Monitoring Capabilities
+↓
 
-Ο οργανισμός απαιτεί αυξημένα επίπεδα προστασίας απέναντι σε:
+Assets
 
-- Cyber Attacks
-- Insider Threats
-- Unauthorized Access
-- Physical Security Incidents
-- Operational Disruption
+↓
 
----
+Dependencies
+
+↓
+
+Threats
+
+↓
+
+Risks
+
+↓
+
+Security Controls
+
+↓
+
+Target Architecture
+
+↓
+
+Security Improvement Roadmap
+
+------------------------------------------------------------------------
 
 ## Στόχοι Έργου
 
-Οι βασικοί στόχοι είναι:
+-   Αναγνώριση κρίσιμων assets και dependencies
+-   Ανάλυση απειλών και κινδύνων
+-   Mapping security controls σε frameworks
+-   Σχεδιασμός target security architecture
+-   Δημιουργία implementation roadmap
 
-- Ανάπτυξη Security Architecture Thinking για Critical Infrastructure περιβάλλοντα
-- Εφαρμογή Risk-Based Decision Making
-- Αναγνώριση Critical Assets και Dependencies
-- Ανάλυση Threats και Attack Scenarios
-- Σχεδιασμός Security Improvement Recommendations
-- Αντιστοίχιση Security Controls με αναγνωρισμένα frameworks
-- Βελτίωση της Security Maturity του οργανισμού
+------------------------------------------------------------------------
 
----
+## Δομή Repository
+
+``` text
+HDIIA-Critical-Infrastructure-Security-Assessment
+
+├── 00_Project_Governance
+├── 01_Business_Context
+├── 02_Current_State_Assessment
+├── 03_Asset_Management
+├── 04_Threat_Model
+├── 05_Risk_Assessment
+├── 06_Target_Security_Architecture
+├── 07_Security_Control_Mapping
+├── 08_Security_Improvement_Roadmap
+├── 09_Interview_Preparation
+└── diagrams
+```
+
+------------------------------------------------------------------------
 
 ## Security Domains
 
 Το έργο καλύπτει:
 
-- Critical Infrastructure Security
-- Data Center Security
-- Identity and Access Management (IAM)
-- Network Security Architecture
-- Risk Management
-- Security Governance
-- Physical Security Integration
-- Cyber-Physical Security
-- Human Risk Management
-- Security Awareness Program Development
+### Asset Management
 
----
+-   Asset inventory
+-   Dependency mapping
+-   Critical services
 
-## Security Awareness Component
+### Threat Modeling
 
-Στο πλαίσιο του Human Risk Management, το έργο περιλαμβάνει Security Awareness Component με στόχο τη μείωση των κινδύνων που προέρχονται από τον ανθρώπινο παράγοντα.
+-   Threat methodology
+-   Threat scenarios
+-   Threat actors
 
-Το Security Awareness Program επικεντρώνεται σε:
+### Risk Assessment
 
-- Security Culture Improvement
-- Employee Security Responsibilities
-- Phishing Awareness
-- Social Engineering Risks
-- Human Factors in Cybersecurity
+-   Risk methodology
+-   Risk register
+-   Risk prioritization
 
-Το υλικό Security Awareness θα αξιολογηθεί και θα βελτιωθεί κατά τη διάρκεια της ανάπτυξης του έργου.
+### Security Architecture
 
----
+-   Defense in Depth
+-   Zero Trust principles
+-   Identity security
+-   Network security
+-   Monitoring
+-   Resilience
 
-## Μεθοδολογία Αξιολόγησης
+------------------------------------------------------------------------
 
-Η αξιολόγηση ακολουθεί Risk-Based Security Methodology:
+## Framework Alignment
 
-1. Κατανόηση επιχειρησιακών απαιτήσεων
-2. Αναγνώριση κρίσιμων assets και dependencies
-3. Ανάλυση threats και attack scenarios
-4. Αξιολόγηση security risks
-5. Καθορισμός security controls
-6. Δημιουργία security improvement roadmap
+Το project ευθυγραμμίζεται με:
 
----
+-   NIST Cybersecurity Framework
+-   ISO 27001 security principles
+-   Critical Infrastructure security practices
 
-## Security Frameworks
+------------------------------------------------------------------------
 
-Το έργο βασίζεται σε:
+## Architecture Diagrams
 
-- NIST Cybersecurity Framework (CSF)
-- NIST SP 800-53 Security Controls
-- ISO/IEC 27001 Principles
-- Zero Trust Architecture Principles
-- Defense-in-Depth Security Principles
+Περιλαμβάνονται:
 
----
+-   Security Architecture Overview
+-   Threat Risk Flow
+-   Zero Trust Model
 
-## Disclaimer
+Τοποθεσία:
 
-Η HDIIA αποτελεί φανταστικό οργανισμό που δημιουργήθηκε αποκλειστικά για εκπαιδευτικούς και επαγγελματικούς σκοπούς portfolio.
+``` text
+diagrams/
+```
 
-Οι αναλύσεις και οι προτάσεις βασίζονται σε δημόσια διαθέσιμες αρχές κυβερνοασφάλειας, βιομηχανικές πρακτικές και έννοιες προστασίας Critical Infrastructure.
+------------------------------------------------------------------------
 
+## Δεξιότητες που Demonstrates
+
+-   Cybersecurity Architecture
+-   Risk Management
+-   Threat Modeling
+-   Security Controls Mapping
+-   Zero Trust Design
+-   Security Improvement Planning
+-   Technical Documentation
+
+------------------------------------------------------------------------
+
+## Σκοπός Portfolio
+
+Το project παρουσιάζει την ικανότητα εκτέλεσης ενός πλήρους security
+assessment από το business context μέχρι το target architecture και το
+implementation roadmap.
