@@ -131,7 +131,7 @@ Location:
 
 The complete executive-level security assessment report is available:
 
-FINAL_REPORT.md
+[FINAL_REPORT.md](10_Final_Report/FINAL_REPORT.md)
 
 The final report provides:
 
