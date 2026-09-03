@@ -4,7 +4,7 @@
 
 Version: 1.0
 
-Phase: 06 Target Security Architecture
+Phase: 07 Target Security Architecture
 
 ------------------------------------------------------------------------
 

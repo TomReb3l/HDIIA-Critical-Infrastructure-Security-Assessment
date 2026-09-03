@@ -2,207 +2,328 @@
 
 # Target Security Architecture Design
 
-Version: 1.0
+**Version:** 1.1\
+**Phase:** 07 Target Security Architecture\
+**Status:** Final Hardening --- Control to Architecture Traceability
 
-Phase: 07 Target Security Architecture
-
----
+------------------------------------------------------------------------
 
 # Ελληνική Έκδοση
 
 ## 1. Σκοπός Target Security Architecture
 
-Η Target Security Architecture αποτελεί το σχεδιαστικό αποτέλεσμα των προηγούμενων φάσεων:
+Η Target Security Architecture αποτελεί το αποτέλεσμα της αλυσίδας:
 
-- Business Context
-- Critical Services
-- Asset Management
-- Threat Modeling
-- Risk Assessment
-- Security Control Mapping
+Business Context
 
-Στόχος είναι η δημιουργία ενός ασφαλούς αρχιτεκτονικού μοντέλου που μειώνει τους αναγνωρισμένους κινδύνους και προστατεύει τις κρίσιμες υπηρεσίες του οργανισμού.
+↓
 
----
+Asset Management
 
-# 2. Security Architecture Principles
+↓
 
-Η αρχιτεκτονική βασίζεται στις αρχές:
+Threat Modeling
+
+↓
+
+Risk Assessment
+
+↓
+
+Security Control Mapping
+
+↓
+
+Target Security Architecture
+
+Στόχος είναι η μετατροπή των απαιτούμενων security controls σε
+υλοποιήσιμα αρχιτεκτονικά components που μειώνουν τους αναγνωρισμένους
+κινδύνους.
+
+------------------------------------------------------------------------
+
+# 2. Architecture Traceability Model
+
+Η σχέση ακολουθεί:
+
+Risk
+
+↓
+
+Security Control
+
+↓
+
+Architecture Component
+
+↓
+
+Security Principle
+
+↓
+
+Operational Capability
+
+↓
+
+Security Improvement Roadmap
+
+------------------------------------------------------------------------
+
+# 3. Risk to Architecture Alignment
+
+  -----------------------------------------------------------------------------
+  Risk ID        Security        Architecture   Security       Roadmap
+                 Control         Component      Principle      Direction
+  -------------- --------------- -------------- -------------- ----------------
+  R-001          Endpoint        Application    Defense in     Improve
+  Ransomware     Protection,     Security       Depth          ransomware
+  Attack         Backup,         Layer,                        resilience
+                 Segmentation    Recovery                      
+                                 Architecture                  
+
+  R-002          MFA, PAM,       Identity       Zero Trust,    IAM
+  Credential     Identity        Security       Least          modernization
+  Compromise     Monitoring      Architecture   Privilege      
+
+  R-003          PAM, Logging,   Privileged     Least          Privileged
+  Privileged     Access Review   Access         Privilege      governance
+  Account Misuse                 Architecture                  improvement
+
+  R-004 Supply   Supplier Risk   Third Party    Secure by      Vendor security
+  Chain          Management      Security       Design         improvement
+  Compromise                     Architecture                  
+
+  R-005 Network  Segmentation,   Network        Resilience by  Infrastructure
+  Disruption     Monitoring,     Resilience     Design         hardening
+                 Redundancy      Architecture                  
+  -----------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# 4. Security Architecture Principles
 
 ## Defense in Depth
 
-Πολλαπλά επίπεδα προστασίας ώστε η αποτυχία ενός control να μην οδηγεί σε συνολική παραβίαση.
+Πολλαπλά επίπεδα προστασίας ώστε η αποτυχία ενός control να μην οδηγεί
+σε συνολική παραβίαση.
+
+## Zero Trust
+
+Βασικές αρχές:
+
+-   Never Trust, Always Verify
+-   Continuous Authentication
+-   Least Privilege Access
+-   User and Device Validation
+-   Continuous Monitoring
 
 ## Least Privilege
 
-Οι χρήστες και τα συστήματα λαμβάνουν μόνο τα απαραίτητα δικαιώματα.
+Οι χρήστες και τα συστήματα διαθέτουν μόνο τα απαραίτητα δικαιώματα.
 
 ## Secure by Design
 
-Η ασφάλεια ενσωματώνεται στον σχεδιασμό και όχι μετά την υλοποίηση.
+Η ασφάλεια ενσωματώνεται από το στάδιο σχεδιασμού.
 
-## Resilience
+## Resilience by Design
 
-Οι κρίσιμες υπηρεσίες σχεδιάζονται για διατήρηση λειτουργίας και ανάκαμψη.
+Οι κρίσιμες υπηρεσίες σχεδιάζονται για αντοχή, συνέχεια λειτουργίας και
+ανάκαμψη.
 
----
+------------------------------------------------------------------------
 
-# 3. Defense in Depth Model
+# 5. Architecture Domains
 
-Η προστασία οργανώνεται σε επίπεδα:
+## Identity Security Architecture
 
-External Protection
+Components:
+
+-   Identity Management
+-   Multi-Factor Authentication
+-   Privileged Access Management
+-   Role Based Access Control
+-   Access Monitoring
+
+Addresses:
+
+-   Credential compromise
+-   Unauthorized access
+-   Privileged misuse
+
+------------------------------------------------------------------------
+
+## Network Security Architecture
+
+Components:
+
+-   Network Segmentation
+-   Firewalls
+-   Secure Routing
+-   IDS/IPS
+-   Network Monitoring
+
+Addresses:
+
+-   Lateral movement
+-   Network attacks
+-   Availability risks
+
+------------------------------------------------------------------------
+
+## Application Security Architecture
+
+Components:
+
+-   Application Security Controls
+-   Secure Configuration
+-   Vulnerability Management
+-   Application Monitoring
+
+Addresses:
+
+-   Application compromise
+-   Service disruption
+
+------------------------------------------------------------------------
+
+## Data Protection Architecture
+
+Components:
+
+-   Encryption
+-   Backup Protection
+-   Data Access Control
+-   Recovery Procedures
+
+Addresses:
+
+-   Data loss
+-   Confidentiality risks
+
+------------------------------------------------------------------------
+
+## Security Monitoring Architecture
+
+Components:
+
+-   Central Logging
+-   SIEM
+-   Detection Rules
+-   Alert Management
+-   Incident Response Integration
+
+Addresses:
+
+-   Threat detection
+-   Incident response capability
+
+------------------------------------------------------------------------
+
+## Resilience Architecture
+
+Components:
+
+-   Disaster Recovery
+-   Business Continuity
+-   Redundant Services
+-   Recovery Testing
+-   Dependency Resilience
+
+Addresses:
+
+-   Service disruption
+-   Operational impact
+
+------------------------------------------------------------------------
+
+# 6. Architecture Relationship
+
+The architecture connects:
+
+Risk
 
 ↓
 
-Network Security
+Security Control
 
 ↓
 
-Identity Security
+Architecture Component
 
 ↓
 
-Application Security
+Operational Capability
 
 ↓
 
-Data Protection
+Roadmap Action
 
-↓
-
-Monitoring and Response
-
-↓
-
-Recovery
-
----
-
-# 4. Network Security Architecture
-
-Η προτεινόμενη αρχιτεκτονική περιλαμβάνει:
-
-## Network Segmentation
-
-Διαχωρισμός:
-
-- User Networks
-- Server Networks
-- Critical Infrastructure Networks
-- Management Networks
-
-## Network Protection
-
-Controls:
-
-- Firewalls
-- Secure Routing
-- Network Monitoring
-- Intrusion Detection
-
-Στόχος:
-
-Περιορισμός lateral movement και προστασία κρίσιμων dependencies.
-
----
-
-# 5. Identity Security Architecture
-
-Η αρχιτεκτονική ταυτότητας βασίζεται σε:
-
-- Central Identity Management
-- Multi-Factor Authentication
-- Privileged Access Management
-- Role Based Access Control
-- Access Monitoring
-
-Στόχος:
-
-Προστασία από credential compromise και unauthorized access.
-
----
-
-# 6. Monitoring and Detection Architecture
-
-Η αρχιτεκτονική monitoring περιλαμβάνει:
-
-- Central Logging
-- SIEM Platform
-- Security Alerts
-- Detection Rules
-- Incident Response Integration
-
-Στόχος:
-
-Έγκαιρη ανίχνευση απειλών και υποστήριξη επιχειρησιακής απόκρισης.
-
----
-
-# 7. Resilience Architecture
-
-Για κρίσιμες υπηρεσίες απαιτούνται:
-
-- Backup Strategy
-- Disaster Recovery Planning
-- Service Redundancy
-- Recovery Testing
-- Dependency Resilience
-
-Στόχος:
-
-Μείωση impact από αστοχίες ή επιθέσεις.
-
----
-
-# 8. Zero Trust Considerations
-
-Η αρχιτεκτονική υιοθετεί Zero Trust αρχές:
-
-- Never Trust, Always Verify
-- Continuous Authentication
-- Least Privilege Access
-- Device and User Validation
-- Continuous Monitoring
-
----
+------------------------------------------------------------------------
 
 # English Version
 
 ## Target Security Architecture Purpose
 
-The target architecture transforms identified risks and security controls into a structured security design.
+The Target Security Architecture transforms identified risks and mapped
+security controls into implementable security design components.
 
-It protects critical services through layered security mechanisms.
+It provides traceability between business risks, security controls,
+architecture decisions, and improvement activities.
 
-## Security Architecture Principles
+------------------------------------------------------------------------
 
-Principles:
+## Architecture Traceability Model
 
-- Defense in Depth
-- Least Privilege
-- Secure by Design
-- Resilience
+Risk
+
+↓
+
+Security Control
+
+↓
+
+Architecture Component
+
+↓
+
+Security Principle
+
+↓
+
+Operational Capability
+
+↓
+
+Security Improvement Roadmap
+
+------------------------------------------------------------------------
 
 ## Architecture Domains
 
 The target architecture includes:
 
-- Network Security Architecture
-- Identity Security Architecture
-- Monitoring and Detection Architecture
-- Resilience Architecture
-- Zero Trust Considerations
+-   Identity Security Architecture
+-   Network Security Architecture
+-   Application Security Architecture
+-   Data Protection Architecture
+-   Security Monitoring Architecture
+-   Resilience Architecture
 
-## Zero Trust
+------------------------------------------------------------------------
 
-The design follows:
+## Framework Alignment
 
-- Verify explicitly
-- Least privilege access
-- Continuous monitoring
+The architecture supports:
 
----
+-   NIST CSF 2.0 security outcomes
+-   ISO/IEC 27001:2022 control themes
+-   Critical infrastructure security practices
+
+This document provides architecture alignment and traceability. It does
+not represent certification or compliance attestation.
+
+------------------------------------------------------------------------
 
 # Document Status
 
@@ -212,4 +333,4 @@ Current Phase:
 
 Next Phase:
 
-Security Improvement Roadmap
+08 Security Improvement Roadmap
