@@ -2,94 +2,285 @@
 
 # Security Improvement Roadmap
 
-Version: 1.0
+**Version:** 1.1\
+**Phase:** 08 Security Improvement Roadmap\
+**Status:** Final Hardening --- Risk to Roadmap Traceability
 
-Phase: 08 Security Improvement Roadmap
+------------------------------------------------------------------------
 
 # Ελληνική Έκδοση
 
-## 1. Σκοπός
+## 1. Σκοπός Security Improvement Roadmap
 
-Το Security Improvement Roadmap μετατρέπει τα αποτελέσματα του assessment σε οργανωμένο σχέδιο υλοποίησης.
+Το Security Improvement Roadmap αποτελεί το τελικό στάδιο του assessment
+lifecycle.
 
-Βασίζεται στα:
-- Risk Register
-- Security Control Mapping
-- Target Security Architecture
+Μετατρέπει τα ευρήματα κινδύνου, τα απαιτούμενα controls και τις
+αρχιτεκτονικές απαιτήσεις σε προτεραιοποιημένες ενέργειες βελτίωσης.
 
-## 2. Improvement Strategy
+Η αλυσίδα traceability είναι:
 
-Current State
-
-↓
-
-Security Gaps
+Risk
 
 ↓
 
-Priority Actions
+Security Control
 
 ↓
 
-Implementation Plan
+Architecture Gap
 
 ↓
 
-Target Maturity
+Priority
 
-## 3. Priority Classification
+↓
 
-### Short Term (0-3 μήνες)
+Implementation Roadmap
 
-- MFA implementation
-- Security logging improvement
-- Critical asset visibility
-- Backup validation
+↓
 
-### Medium Term (3-12 μήνες)
+Security Metrics
 
-- Network segmentation
-- SIEM enhancement
-- PAM implementation
-- Security process maturity
+------------------------------------------------------------------------
 
-### Long Term (12+ μήνες)
+# 2. Roadmap Traceability Model
 
-- Advanced detection
-- Zero Trust maturity
-- Continuous improvement program
+Κάθε action πρέπει να συνδέεται με:
 
-## 4. Implementation Dependencies
+-   Risk ID
+-   Security Control
+-   Architecture Requirement
+-   Priority
+-   Implementation Activity
+-   Success Metric
+-   Responsible Owner
 
-- Business priorities
-- Resources
-- Technology readiness
-- Operational requirements
+------------------------------------------------------------------------
 
-## 5. Security Maturity Objectives
+# 3. Risk to Roadmap Alignment
 
-- Improved risk management
-- Strong identity protection
-- Better threat detection
-- Increased resilience
+  ---------------------------------------------------------------------------------------
+  Risk ID      Security        Architecture Gap Priority    Roadmap Action Security
+               Control                                                     Metric
+  ------------ --------------- ---------------- ----------- -------------- --------------
+  R-001        Backup, EDR,    Limited          High        Improve        Recovery Time
+  Ransomware   Segmentation,   ransomware                   endpoint       Objective
+  Attack       Recovery        resilience and               protection,    (RTO), Backup
+               Testing         recovery                     segmentation   Success Rate
+                               capability                   and recovery   
+                                                            validation     
+
+  R-002        MFA, PAM,       Insufficient     Critical    Implement MFA  MFA Coverage
+  Credential   Identity        identity                     enforcement    %, Privileged
+  Compromise   Monitoring      protection                   and privileged Account Review
+                               maturity                     access         Completion
+                                                            governance     
+
+  R-003        PAM, Logging,   Limited          High        Strengthen     PAM Adoption
+  Privileged   Access Review   privileged                   privileged     %, Access
+  Account                      account                      access         Review
+  Misuse                       visibility and               controls and   Compliance
+                               governance                   auditing       
+
+  R-004 Supply Supplier Risk   Limited          High        Establish      Supplier
+  Chain        Management      third-party                  supplier       Assessment
+  Compromise                   security                     assessment and Coverage
+                               visibility                   monitoring     
+                                                            process        
+
+  R-005        Segmentation,   Infrastructure   High        Improve        Network
+  Network      Monitoring,     resilience                   network        Availability
+  Disruption   Redundancy      improvement                  resilience and %, Critical
+                               required                     monitoring     Alert Response
+                                                            capabilities   Time
+  ---------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# 4. Implementation Priority Model
+
+## Critical Priority
+
+Characteristics:
+
+-   High business impact
+-   Significant security exposure
+-   Immediate treatment required
+
+Examples:
+
+-   Identity protection improvements
+-   Privileged access hardening
+-   Critical service resilience
+
+------------------------------------------------------------------------
+
+## High Priority
+
+Characteristics:
+
+-   Important risk reduction
+-   Requires planned implementation
+
+Examples:
+
+-   Network segmentation
+-   Monitoring improvements
+-   Recovery testing
+
+------------------------------------------------------------------------
+
+## Medium Priority
+
+Characteristics:
+
+-   Security maturity improvements
+-   Optimization activities
+
+Examples:
+
+-   Process improvements
+-   Additional automation
+-   Reporting enhancements
+
+------------------------------------------------------------------------
+
+# 5. Security Metrics
+
+The roadmap uses measurable indicators:
+
+## Identity Security
+
+Metrics:
+
+-   MFA adoption percentage
+-   Privileged account review completion
+-   Unauthorized access attempts
+
+## Resilience
+
+Metrics:
+
+-   Backup success rate
+-   Recovery testing completion
+-   Recovery Time Objective achievement
+
+## Monitoring
+
+Metrics:
+
+-   Detection coverage
+-   Mean Time To Detect (MTTD)
+-   Mean Time To Respond (MTTR)
+
+## Governance
+
+Metrics:
+
+-   Risk treatment completion
+-   Control implementation status
+-   Supplier assessment coverage
+
+------------------------------------------------------------------------
+
+# 6. Continuous Improvement Cycle
+
+The improvement process follows:
+
+Assessment
+
+↓
+
+Risk Prioritization
+
+↓
+
+Control Implementation
+
+↓
+
+Architecture Improvement
+
+↓
+
+Metrics Measurement
+
+↓
+
+Continuous Improvement
+
+------------------------------------------------------------------------
 
 # English Version
 
 ## Purpose
 
-The roadmap converts assessment findings into implementation priorities.
+The Security Improvement Roadmap represents the final stage of the
+assessment lifecycle.
 
-## Structure
+It converts identified risks, required controls, and architecture
+requirements into prioritized improvement activities.
 
-Current State → Security Gaps → Priority Actions → Implementation Plan → Target Maturity
+Traceability chain:
 
-## Objectives
+Risk
 
-- Reduce security risks
-- Improve maturity
-- Increase resilience
+↓
 
-## Document Status
+Security Control
+
+↓
+
+Architecture Gap
+
+↓
+
+Priority
+
+↓
+
+Implementation Roadmap
+
+↓
+
+Security Metrics
+
+------------------------------------------------------------------------
+
+# Roadmap Traceability Model
+
+Each roadmap activity should be linked to:
+
+-   Risk ID
+-   Security Control
+-   Architecture Requirement
+-   Priority
+-   Implementation Activity
+-   Success Metric
+-   Responsible Owner
+
+------------------------------------------------------------------------
+
+# Framework Alignment
+
+The roadmap supports:
+
+-   Risk-based security improvement
+-   NIST CSF 2.0 continuous improvement concepts
+-   ISO/IEC 27001:2022 improvement principles
+
+This roadmap provides planning and traceability. It does not represent
+certification or compliance attestation.
+
+------------------------------------------------------------------------
+
+# Document Status
 
 Current Phase:
+
 08 Security Improvement Roadmap
+
+Assessment Lifecycle:
+
+Risk → Controls → Architecture → Roadmap
