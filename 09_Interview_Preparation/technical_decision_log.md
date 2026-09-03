@@ -88,6 +88,18 @@ Business Service → Asset → Risk → Control → Architecture
 
 Η ασφάλεια πρέπει να μετριέται και να βελτιώνεται συνεχώς.
 
+## Measurement
+
+Η πρόοδος των security improvements παρακολουθείται μέσω:
+
+- security metrics
+
+- maturity targets
+
+- improvement roadmap tracking
+
+Η χρήση metrics επιτρέπει την αξιολόγηση της αποτελεσματικότητας των security improvements με μετρήσιμα κριτήρια.
+
 ------------------------------------------------------------------------
 
 # English Version

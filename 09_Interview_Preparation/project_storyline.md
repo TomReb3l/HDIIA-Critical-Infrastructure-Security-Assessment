@@ -106,8 +106,15 @@ Roadmap
 
 Δημιουργήθηκαν:
 
-- risk methodology
+- risk assessment methodology
+
+- 5×5 likelihood-impact scoring model
+
 - risk register
+
+- risk prioritization approach
+
+Η αξιολόγηση των κινδύνων βασίστηκε σε Likelihood × Impact scoring ώστε να επιτευχθεί συνεπής προτεραιοποίηση των security risks.
 
 ## Phase 5 - Security Design
 
@@ -203,6 +210,18 @@ Answer:
 Η δημιουργία traceability μεταξύ business impact, assets, threats, risks και controls.
 
 ---
+
+# Framework Alignment
+
+Η προσέγγιση του assessment ευθυγραμμίζεται με έννοιες από:
+
+- NIST Cybersecurity Framework 2.0
+
+- ISO/IEC 27001 security principles
+
+- Critical infrastructure security practices
+
+Τα frameworks χρησιμοποιήθηκαν ως σημεία αναφοράς για τη δομή αξιολόγησης και όχι ως δήλωση πιστοποίησης ή compliance attestation.
 
 # English Version
 
