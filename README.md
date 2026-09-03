@@ -127,6 +127,31 @@ Location:
 
 `08_Security_Improvement_Roadmap/`
 
+## Final Report
+
+The complete executive-level security assessment report is available:
+
+FINAL_REPORT.md
+
+The final report provides:
+
+Executive security assessment summary
+
+Assessment objectives and methodology
+
+Key risk findings
+
+Security control mapping overview
+
+Target security architecture summary
+
+Security improvement roadmap
+
+Framework alignment overview
+
+This document represents the final consolidated view of the HDIIA
+cybersecurity assessment lifecycle.
+
 ## Disclaimer
 
 HDIIA is a fictional organization created exclusively for cybersecurity
