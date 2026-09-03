@@ -2,34 +2,38 @@
 
 # Security Control Framework Mapping
 
-Version: 1.0
+**Version:** 1.1\
+**Phase:** 06 Security Control Mapping\
+**Status:** Final Hardening --- Risk to Control Traceability
 
-Phase: 06 Security Control Mapping
-
----
+------------------------------------------------------------------------
 
 # Ελληνική Έκδοση
 
 ## 1. Σκοπός Control Mapping
 
-Το Security Control Framework Mapping αποτελεί τη σύνδεση μεταξύ των αναγνωρισμένων κινδύνων και των απαιτούμενων μέτρων προστασίας.
+Το Security Control Framework Mapping αποτελεί τη σύνδεση μεταξύ των
+αξιολογημένων κινδύνων και των απαιτούμενων security controls.
 
-Βασίζεται στα προηγούμενα artifacts:
+Βασίζεται στα:
 
-- Risk Register
-- Threat Scenario Register
-- Asset Inventory Register
-- Asset Dependency Matrix
+-   Risk Register
+-   Threat Scenario Register
+-   Asset Inventory Register
+-   Asset Dependency Matrix
+-   Risk Assessment Methodology
 
-Στόχος:
+Στόχοι:
 
-- αντιστοίχιση κινδύνων με controls
-- αναγνώριση απαιτήσεων προστασίας
-- προετοιμασία Target Security Architecture
+-   αντιστοίχιση risks με security controls,
+-   τεκμηρίωση control requirements,
+-   υποστήριξη Target Security Architecture,
+-   δημιουργία traceability μεταξύ risk, control και implementation
+    requirement.
 
----
+------------------------------------------------------------------------
 
-# 2. Risk to Control Relationship
+# 2. Risk to Control Traceability Model
 
 Η σχέση ακολουθεί:
 
@@ -45,165 +49,160 @@ Security Control
 
 ↓
 
-Implementation Requirement
-
-Παράδειγμα:
-
-Threat Scenario:
-Credential Compromise
+Framework Reference
 
 ↓
 
-Risk:
-Unauthorized Access
+Architecture Requirement
 
 ↓
 
-Security Objective:
-Protect Identity
+Implementation Activity
 
-↓
+------------------------------------------------------------------------
 
-Controls:
-MFA, Privileged Access Management, Access Monitoring
+# 3. Risk Based Control Mapping
 
----
+  --------------------------------------------------------------------------------------
+  Risk ID     Risk         Security         Required         NIST CSF    ISO/IEC
+              Scenario     Objective        Controls         2.0         27001:2022
+                                                             Alignment   Alignment
+  ----------- ------------ ---------------- ---------------- ----------- ---------------
+  R-001       Ransomware   Protect critical Endpoint         Protect,    A.8.13 Backup,
+              Attack       applications and Protection,      Detect,     A.8.8
+                           improve          Backup, Network  Recover     Vulnerability
+                           resilience       Segmentation,                Management
+                                            Recovery Testing             
 
-# 3. Security Control Categories
+  R-002       Credential   Protect identity MFA, PAM, Least  Govern,     A.5.15 Access
+              Compromise   and access       Privilege,       Protect,    Control, A.5.16
+                                            Authentication   Detect      Identity
+                                            Monitoring                   Management
 
-## 3.1 Identity and Access Management
+  R-003       Privileged   Control          Privileged       Govern,     A.8.2
+              Account      administrative   Access           Protect,    Privileged
+              Misuse       access           Management,      Detect      Access Rights
+                                            Account                      
+                                            Monitoring,                  
+                                            Audit Logging                
 
-Στόχος:
+  R-004       Supply Chain Manage           Supplier         Govern,     A.5.19 Supplier
+              Compromise   third-party      Assessment,      Identify    Relationships
+                           security         Third Party Risk             
+                           exposure         Management                   
 
-Προστασία ταυτότητας και πρόσβασης.
+  R-005       Network      Maintain         Segmentation,    Protect,    A.8.14
+              Disruption   availability and Monitoring,      Detect,     Redundancy of
+                           operational      Redundancy,      Recover     Processing
+                           resilience       Recovery                     Facilities
+                                            Procedures                   
+  --------------------------------------------------------------------------------------
 
-Controls:
+------------------------------------------------------------------------
 
-- Multi-Factor Authentication
-- Least Privilege Access
-- Privileged Access Management
-- Account Monitoring
+# 4. Security Control Categories
 
----
-
-## 3.2 Network Security
-
-Στόχος:
-
-Προστασία δικτυακής υποδομής.
-
-Controls:
-
-- Network Segmentation
-- Firewall Controls
-- Secure Network Architecture
-- Network Monitoring
-
----
-
-## 3.3 Data Protection
-
-Στόχος:
-
-Προστασία εμπιστευτικότητας και ακεραιότητας δεδομένων.
-
-Controls:
-
-- Encryption
-- Backup
-- Data Access Control
-- Recovery Procedures
-
----
-
-## 3.4 Security Monitoring
-
-Στόχος:
-
-Έγκαιρη ανίχνευση και απόκριση.
+## Identity and Access Management
 
 Controls:
 
-- SIEM
-- Logging
-- Detection Rules
-- Incident Response
+-   Multi-Factor Authentication
+-   Least Privilege Access
+-   Privileged Access Management
+-   Identity Monitoring
 
----
-
-## 3.5 Resilience and Recovery
-
-Στόχος:
-
-Διατήρηση κρίσιμων υπηρεσιών.
+## Network Security
 
 Controls:
 
-- Disaster Recovery
-- Business Continuity
-- Redundancy
-- Recovery Testing
+-   Network Segmentation
+-   Firewall Controls
+-   Secure Network Architecture
+-   Network Monitoring
 
----
+## Data Protection
 
-# 4. NIST CSF Mapping
+Controls:
 
-Η χαρτογράφηση ακολουθεί τις βασικές λειτουργίες:
+-   Encryption
+-   Backup Protection
+-   Data Access Control
+-   Recovery Procedures
 
-| NIST Function | Security Focus |
-|---|---|
-| Identify | Asset Management, Risk Assessment |
-| Protect | Access Control, Data Protection |
-| Detect | Monitoring, Event Detection |
-| Respond | Incident Response |
-| Recover | Recovery Planning |
+## Security Monitoring
 
----
+Controls:
 
-# 5. ISO 27001 Alignment
+-   SIEM
+-   Centralized Logging
+-   Detection Rules
+-   Incident Response
 
-Η προσέγγιση ευθυγραμμίζεται με:
+## Resilience and Recovery
 
-- Risk Management Process
-- Access Control
-- Asset Management
-- Operations Security
-- Incident Management
-- Business Continuity
+Controls:
 
----
+-   Disaster Recovery
+-   Business Continuity
+-   Redundancy
+-   Recovery Testing
 
-# 6. Critical Infrastructure Security Considerations
+------------------------------------------------------------------------
 
-Για κρίσιμες υποδομές απαιτούνται:
+# 5. NIST CSF 2.0 Alignment
 
-- υψηλή διαθεσιμότητα
-- περιορισμός επιχειρησιακής διακοπής
-- προστασία κρίσιμων dependencies
-- διαχωρισμός δικτύων
-- συνεχής παρακολούθηση
+The mapping considers the six NIST CSF 2.0 Functions:
 
----
+  Function   Security Focus
+  ---------- ----------------------------------------------
+  Govern     Risk strategy, policies, supplier governance
+  Identify   Assets, risks, dependencies
+  Protect    Access control, protection mechanisms
+  Detect     Monitoring and event detection
+  Respond    Incident response and containment
+  Recover    Recovery and resilience
+
+------------------------------------------------------------------------
+
+# 6. ISO/IEC 27001:2022 Alignment
+
+The mapping references relevant control themes:
+
+-   Access Control
+-   Identity Management
+-   Asset Management
+-   Supplier Security
+-   Backup and Recovery
+-   Operations Security
+-   Incident Management
+-   Business Continuity
+
+This mapping supports control alignment and traceability. It does not
+represent certification or compliance attestation.
+
+------------------------------------------------------------------------
 
 # 7. Control Implementation Principles
 
-Οι έλεγχοι πρέπει να εφαρμόζονται σύμφωνα με:
+Controls are selected based on:
 
-- Risk Priority
-- Business Impact
-- Asset Criticality
-- Operational Requirements
-- Security Maturity
+-   Risk priority
+-   Business impact
+-   Asset criticality
+-   Operational requirements
+-   Security maturity
 
----
+------------------------------------------------------------------------
 
 # English Version
 
 ## Purpose
 
-Security Control Framework Mapping connects identified risks with security controls and implementation requirements.
+Security Control Framework Mapping connects evaluated risks with
+required security controls, framework references, and implementation
+requirements.
 
-## Risk to Control Relationship
+## Traceability Model
 
 Risk
 
@@ -217,36 +216,28 @@ Security Control
 
 ↓
 
-Implementation Requirement
+Framework Reference
 
-## Control Categories
+↓
 
-Main categories:
+Architecture Requirement
 
-- Identity and Access Management
-- Network Security
-- Data Protection
-- Security Monitoring
-- Resilience and Recovery
+↓
+
+Implementation Activity
 
 ## Framework Alignment
 
-Aligned with:
+The mapping aligns control selection with:
 
-- NIST Cybersecurity Framework
-- ISO 27001 security principles
-- Critical Infrastructure security practices
+-   NIST Cybersecurity Framework 2.0 concepts
+-   ISO/IEC 27001:2022 control themes
+-   Critical Infrastructure security practices
 
-## Implementation Principles
+The mapping provides assessment traceability and does not represent
+certification.
 
-Controls should be selected based on:
-
-- Risk priority
-- Business impact
-- Asset criticality
-- Operational requirements
-
----
+------------------------------------------------------------------------
 
 # Document Status
 
@@ -256,4 +247,4 @@ Current Phase:
 
 Next Phase:
 
-Target Security Architecture
+07 Target Security Architecture
