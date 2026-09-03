@@ -152,6 +152,12 @@ Framework alignment overview
 This document represents the final consolidated view of the HDIIA
 cybersecurity assessment lifecycle.
 
+## Portfolio Showcase
+
+A concise overview of the project approach, methodology and cybersecurity capabilities:
+
+[PROJECT_SHOWCASE.md](PROJECT_SHOWCASE.md)
+
 ## Disclaimer
 
 HDIIA is a fictional organization created exclusively for cybersecurity
