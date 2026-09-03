@@ -118,6 +118,22 @@ Location:
 
 `07_Target_Security_Architecture/`
 
+## Security Architecture Visuals
+
+The target security architecture is represented through the following design artifacts.
+
+### Security Architecture Overview
+
+![Security Architecture Overview](diagrams/security_architecture_overview.png)
+
+### Threat and Risk Flow
+
+![Threat Risk Flow](diagrams/threat_risk_flow.png)
+
+### Zero Trust Security Model
+
+![Zero Trust Model](diagrams/zero_trust_model.png)
+
 ## Security Improvement Roadmap
 
 The roadmap translates findings into prioritized implementation
