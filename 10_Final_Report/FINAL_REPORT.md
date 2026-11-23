@@ -2,11 +2,22 @@
 
 ## Executive Security Assessment Report
 
-**Version:** 1.0 Final Assessment\
+**Version:** 2.0 Integrated Assessment\
 **Project Type:** Cybersecurity Portfolio Assessment\
 **Organization:** HDIIA (Fictional Critical Infrastructure Organization)
 
 ------------------------------------------------------------------------
+
+## Management decisions · Edition 2
+
+Fictional portfolio assessment. Priorities reflect the project's 5×5 scenario model. Decisions below are proposed for the exercise.
+
+| Priority / owner | Decision requested | Acceptance evidence |
+|---|---|---|
+| R-002 · Credential compromise · 16/25 Critical · Identity Owner | Prioritise MFA enforcement and privileged identity review. | Reconcile the privileged account inventory to MFA enrolment; document coverage and approved exceptions. |
+| R-006 · Contractor badge expiry · 12/25 High · Site Security Manager | Correct the late expiry, resolve the evidence gap and retest the process. | Matched authorisations and timestamped events, exception dispositions and successful retest. |
+
+**FAC-01 exercise result:** 1 of 3 verified on time, 1 late by 84 minutes, 1 unverified. Actual unauthorised entry is unknown. [Reproduce the assessment](../12_Security_Operations/Contractor_Access/assessment.md). [Review all risks](../05_Risk_Assessment/risk_register.md).
 
 # 1. Executive Summary
 

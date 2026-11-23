@@ -1,5 +1,9 @@
 # HDIIA Critical Infrastructure Security Assessment
 
+**Έκδοση 2 · Προσομοιωμένη αξιολόγηση**
+
+Διαδρομή ανάγνωσης: [αποφάσεις διοίκησης](10_Final_Report/FINAL_REPORT.md) και [έλεγχος πρόσβασης εργολάβων](12_Security_Operations/Contractor_Access/assessment.md). Τα δύο CSV επιτρέπουν επανάληψη του ελέγχου. Η αρχική παρουσίαση και τα γραφήματα απεικονίζουν την αρχική αξιολόγηση.
+
 ## Δομή Repository
 
 ``` text
@@ -16,6 +20,7 @@ HDIIA-Critical-Infrastructure-Security-Assessment/
 ├── 08_Security_Improvement_Roadmap/
 ├── 09_Interview_Preparation/
 ├── 10_Final_Report/
+├── 12_Security_Operations/
 ├── diagrams/
 ├── README.md
 └── README_GR.md

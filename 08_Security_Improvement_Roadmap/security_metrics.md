@@ -87,3 +87,8 @@ Metrics support:
 -   control effectiveness
 -   architecture improvement
 -   security maturity growth
+
+
+## FAC-01 · Verified timely badge deactivation
+
+Count badges with documented deactivation by expiry / all approvals expiring in the review period. Show late and unverified counts separately. Site security reconciles approvals against the access system monthly. Exercise target: 100%. Sample: 1/3 verified on time, 1/3 late, 1/3 unverified. [Worked example](../12_Security_Operations/Contractor_Access/assessment.md).

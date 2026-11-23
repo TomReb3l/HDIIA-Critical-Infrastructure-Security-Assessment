@@ -149,3 +149,8 @@ following artifacts:
 3.  Detection Engineering Framework
 4.  Threat Hunting Plan
 5.  Incident Response Playbook
+
+
+## Physical security operations
+
+[Contractor badge expiry review](Contractor_Access/assessment.md) covers TS-006, R-006 and FAC-01.

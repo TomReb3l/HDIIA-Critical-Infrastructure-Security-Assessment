@@ -161,3 +161,8 @@ Risk Priority → Security Requirement → Action → Validation → Improvement
 Current Phase:
 
 08 Security Improvement Roadmap
+
+
+## R-006 implementation decision
+
+Site Security Manager owns follow-up. Within one working day of review, request the missing badge record and check current access status. Within 30 days, Access Administration tests expiry enforcement. At the next monthly review, Site Security reconciles every expiring approval, records exceptions and reports the verified on-time fraction. Dates and targets are proposed exercise assumptions.
