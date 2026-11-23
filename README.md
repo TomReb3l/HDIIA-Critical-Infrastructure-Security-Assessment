@@ -1,5 +1,9 @@
 # HDIIA Critical Infrastructure Security Assessment
 
+**Edition 2 · Fictional assessment**
+
+Start with the [management decisions](10_Final_Report/FINAL_REPORT.md), then reproduce the [contractor access review](12_Security_Operations/Contractor_Access/assessment.md) using the two CSV extracts. The original presentation and dashboard illustrate the baseline assessment.
+
 ![Cybersecurity
 Assessment](https://img.shields.io/badge/Cybersecurity-Assessment-blue)
 ![Framework](https://img.shields.io/badge/NIST-CSF%202.0-green)
@@ -74,6 +78,7 @@ HDIIA-Critical-Infrastructure-Security-Assessment/
 ├── 08_Security_Improvement_Roadmap/
 ├── 09_Interview_Preparation/
 ├── 10_Final_Report/
+├── 12_Security_Operations/
 ├── diagrams/
 ├── HDIIA_Security_Assessment_Presentation.pptx
 ├── README.md

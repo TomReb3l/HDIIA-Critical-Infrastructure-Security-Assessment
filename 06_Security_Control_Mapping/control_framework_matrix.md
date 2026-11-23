@@ -4,7 +4,7 @@
 
 Version: 1.0
 
-Phase: 07 Security Control Mapping
+Phase: 06 Security Control Mapping
 
 ------------------------------------------------------------------------
 
@@ -230,3 +230,8 @@ Current Phase:
 Artifact:
 
 control_framework_matrix.md
+
+
+## R-006 · Physical access authorisation
+
+FAC-01 requires each temporary badge to be disabled by the end of the authorised window. The sponsor sets the deadline, access administration configures expiry, and site security reviews exceptions. Design references: NIST SP 800-53 Rev. 5 PE-2 (physical access authorisations) and PE-3 (physical access control). The timing rule is local to this exercise. ENISA's NIS2 implementation guidance, section 13, provides physical-security context. [Test procedure and evidence](../12_Security_Operations/Contractor_Access/assessment.md).

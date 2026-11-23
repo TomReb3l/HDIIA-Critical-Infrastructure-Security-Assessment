@@ -94,6 +94,14 @@ Scenario, Threat Actor, Owner, Controls και Treatment.
 
 ------------------------------------------------------------------------
 
+### R-006 · Contractor access after expiry
+
+| Scenario | Asset / service | Likelihood | Impact | Score | Risk owner |
+|---|---|---:|---:|---|---|
+| TS-006 | HDIIA-DC-001 / Hosting of Critical Systems | 3 | 4 | 12 · High | Site Security Manager |
+
+Scenario judgement: manual expiry makes delay plausible. Access to a restricted hosting area could disrupt service. The score describes potential exposure under the assumed controls. The sample measures timeliness only. Proposed treatment: enforce time-limited access and reconcile expiry exceptions. [Evidence and closure criteria](../12_Security_Operations/Contractor_Access/assessment.md).
+
 ## 5. Risk Treatment Preparation
 
 Τα αξιολογημένα risks χρησιμοποιούνται για:

@@ -32,6 +32,7 @@ Threat Actor → Attack Path → Target Asset → Business Service Impact → Ri
 | TS-003 | Privileged account misuse | Insider User | Administrative Accounts | Confidentiality and integrity impact | Privileged access abuse | Low/Medium | High |
 | TS-004 | Supply chain compromise | Third Party | External Dependencies | Service disruption | Trusted access abuse | Low | High |
 | TS-005 | Network infrastructure disruption | Cyber Actor / Failure | Core Network Services | Availability degradation | Attack or failure | Medium | Medium/High |
+| TS-006 | Contractor badge remains enabled after approved work ends | Formerly authorised contractor | HDIIA-DC-001 | Potential unauthorised physical access to critical hosting infrastructure | Expiry and deactivation times differ | Medium | High |
 
 ## 4. Existing Security Considerations
 
